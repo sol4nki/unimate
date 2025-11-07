@@ -6,6 +6,7 @@ export default function SettingsPage() {
   return (
     <ScrollView marginBottom={80}>
     <SafeAreaView style={{ flex: 1, paddingLeft: 20, paddingRight: 20, marginTop: 20, gap: 20 }}>
+      
       <View style={{position: 'absolute', top: -50, left: 0, backgroundColor: 'lightgrey', height: 210, width: '120%'}}/>
       <View style={{height: 100, width: 100, backgroundColor: 'gray', borderRadius: 500, alignSelf: 'center', zIndex: 900, marginTop: 60}}/>
       <Text style={{ fontSize: 22, fontWeight: '600', alignSelf: 'center' }}>Pranjal Solanki</Text>
@@ -19,7 +20,7 @@ export default function SettingsPage() {
       <View style={styles.item} />
       <View style={styles.item} />
       <View style={styles.logout}>
-        <Text style={{ color: 'white', fontWeight: '800', fontSize: 16 }}>Logout</Text>
+        <Text style={{ color: 'white', fontWeight: '800', fontSize: 16 }}>←  Logout</Text>
       </View>
 
     </SafeAreaView>

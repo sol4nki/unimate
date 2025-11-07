@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView, Text, View } from 'react-native';
+import { Alert, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Quote from '../components/Quote';
 import Sqbutton from '../components/Sqbutton';
@@ -22,9 +22,16 @@ function topmsg(user){
 }
 
 export default function Home() {
+    const showAlert = () => {
+                Alert.alert(
+                'Quick Reminder!',
+                'You have alot of pending work check it out in the Tasks section.',
+                );
+            };
   return (
     <ScrollView marginBottom={80}>
     <SafeAreaView style={{ flex: 1, paddingLeft: 20, paddingRight: 20, marginTop: 20, gap: 20 }}>
+        {showAlert()}
         <Text style={{ fontSize: 22, fontWeight: '600' }}>{topmsg("Pranjal")}</Text>
         <Text style={{ fontSize: 16, fontWeight: '400', color: '#555555', marginTop: -15 }}>{new Date().toLocaleString('en-US', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}</Text>
         <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
