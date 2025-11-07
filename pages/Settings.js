@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { Alert, View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function SettingsPage() {
@@ -19,9 +19,9 @@ export default function SettingsPage() {
       <View style={styles.item} />
       <View style={styles.item} />
       <View style={styles.item} />
-      <View style={styles.logout}>
+      <TouchableOpacity style={styles.logout} onPress={() => Alert.alert("Logged Out", "Successfully logged out of your account please log back in.")}>
         <Text style={{ color: 'white', fontWeight: '800', fontSize: 16 }}>←  Logout</Text>
-      </View>
+      </TouchableOpacity>
 
     </SafeAreaView>
     </ScrollView>

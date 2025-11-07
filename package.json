@@ -17,6 +17,7 @@
     "expo-status-bar": "~3.0.8",
     "react": "19.1.0",
     "react-native": "0.81.5",
+    "react-native-big-calendar": "^4.19.0",
     "react-native-paper": "^5.14.5",
     "react-native-safe-area-context": "~5.6.0",
     "react-native-screens": "~4.16.0",

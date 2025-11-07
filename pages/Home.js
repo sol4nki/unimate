@@ -30,7 +30,7 @@ export default function Home() {
             };
   return (
     <ScrollView marginBottom={80}>
-    <SafeAreaView style={{ flex: 1, paddingLeft: 20, paddingRight: 20, marginTop: 20, gap: 20 }}>
+    <SafeAreaView style={{ flex: 1, paddingLeft: 20, paddingRight: 20, marginTop: 10, gap: 20 }}>
         {showAlert()}
         <Text style={{ fontSize: 26, fontWeight: '600' }}>{topmsg("Pranjal")}</Text>
         <Text style={{ fontSize: 16, fontWeight: '400', color: '#555555', marginTop: -15 }}>{new Date().toLocaleString('en-US', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}</Text>

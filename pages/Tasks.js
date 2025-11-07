@@ -6,11 +6,11 @@ import Adde from '../components/Adde';
 
 export default function Tasks() {
   return (
-    <View style={{ flex: 1 }}>
-    <ScrollView marginBottom={80}>
-      
-    <SafeAreaView style={{ flex: 1, paddingLeft: 20, paddingRight: 20, marginTop: 20, gap: 20 }}>
-        <Header title="Tasks"/>
+    <View style={{ flex: 1, backgroundColor: '#f7f7f7' }}>
+    <ScrollView marginBottom={80} marginTop={30} backgroundColor="#f7f7f7">
+      <Header title="Tasks"/>
+    <SafeAreaView style={{ flex: 1, paddingLeft: 20, paddingRight: 20, gap: 20 }}>
+        
         <TaskButton name="Math Assignment" due="Oct 10, 2025" tag1="MA101" color1="#FF6B6B" tag2="High" color2="#FF3B3B" onPress={() => {}} />
         <TaskButton name="Physics Lab Report" due="Oct 12, 2025" tag1="PH102" color1="#4ECDC4" tag2="Medium" color2="#FFA500" onPress={() => {}} />
         <TaskButton name="Computer Science Project" due="Oct 15, 2025" tag1="CS103" color1="#556270" tag2="High" color2="#FF3B3B" onPress={() => {}} />

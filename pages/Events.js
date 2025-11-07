@@ -7,10 +7,11 @@ import Adde from '../components/Adde';
 
 export default function Events() {
   return (
-    <View style={{ flex: 1 }}>
-    <ScrollView style={{marginBottom:80}}>
-    <SafeAreaView style={{ flex: 1, paddingLeft: 20, paddingRight: 20, marginTop: 20, gap: 20, alignItems: 'center' }}>
-      <Header title="Events"/>
+    <View style={{ flex: 1, backgroundColor: '#f7f7f7' }}>
+    <ScrollView style={{marginBottom:80, marginTop: 30, backgroundColor: '#f7f7f7'}}>
+    <Header title="Events"/>
+    <SafeAreaView style={{ flex: 1, paddingLeft: 20, paddingRight: 20 , gap: 20, alignItems: 'center' }}>
+      
       {/* <Text style={{ fontSize: 22, fontWeight: '600' }}>Events Screenss</Text> 
         yes i couldnt figure out why "flex:1 view box isnt working."
       */}

@@ -3,15 +3,17 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from '../components/Header';
 import Adde from '../components/Adde';
 import Monmenu from '../components/Monmenu';
+import Times from '../components/Times';
 
 export default function Timetable() {
   return (
-    <View style={{ flex: 1 }}>
-    <SafeAreaView style={{ flex: 1, paddingLeft: 20, paddingRight: 20, marginTop: 20, gap: 20 }}>
-      
+    <View style={{ flex: 1, marginTop: 30, backgroundColor: '#f7f7f7' }}>
       <Header title="Timetable"/>
-      <Monmenu active={1} />
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#f7f7f7' }}>
       
+      
+      {/* <Monmenu active={1} /> */}
+      <Times/>
     </SafeAreaView>
 
     <Adde onPress={() => {Alert.alert("Verify First", "Only verified people with access to database can edit timetables.")}} />
