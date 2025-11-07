@@ -26,7 +26,8 @@ export default function App() {
           headerShown: false,
           tabBarActiveTintColor: '#007AFF',
           tabBarInactiveTintColor: 'gray',
-          tabBarStyle: { // mere hisab se ye best config hai nav ki 
+          tabBarStyle: { 
+            // mere hisab se ye best config hai nav ki
             // marginTop: 10, 
             paddingTop: 10,    
             height: 90, 
