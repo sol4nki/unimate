@@ -32,7 +32,7 @@ export default function Home() {
     <ScrollView marginBottom={80}>
     <SafeAreaView style={{ flex: 1, paddingLeft: 20, paddingRight: 20, marginTop: 20, gap: 20 }}>
         {showAlert()}
-        <Text style={{ fontSize: 22, fontWeight: '600' }}>{topmsg("Pranjal")}</Text>
+        <Text style={{ fontSize: 26, fontWeight: '600' }}>{topmsg("Pranjal")}</Text>
         <Text style={{ fontSize: 16, fontWeight: '400', color: '#555555', marginTop: -15 }}>{new Date().toLocaleString('en-US', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}</Text>
         <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
             <Sqbutton name="Assignments" onPress={() => {}} />
@@ -41,11 +41,11 @@ export default function Home() {
             <Sqbutton name="Events" onPress={() => {}} />
         </View>
         <Quote />
-        <Section title="Today's Classes" onPress={() => {}} />
+        <Section title="Today's Classes" screen="Timetable" />
             <ClassButton name="IHCI" time="10:00AM - 12:00PM" room="C101" onPress={() => {}} />
             <ClassButton name="Linear Algebra" time="1:00PM - 3:00PM" room="C102" onPress={() => {}} />
             <ClassButton name="Introduction to Prog" time="3:00PM - 5:00PM" room="C103" onPress={() => {}} />
-        <Section title="Upcoming Tasks" onPress={() => {}} />
+        <Section title="Upcoming Tasks" screen="Tasks" />
             <TaskButton name="Math Assignment" due="Oct 10, 2025" onPress={() => {}} />
             <TaskButton name="Physics Lab Report" due="Oct 10, 2025" onPress={() => {}} />
             <TaskButton name="Computer Science Project" due="Oct 10, 2025" onPress={() => {}} />

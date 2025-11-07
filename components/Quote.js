@@ -14,7 +14,7 @@ const quotes = [
 export default function Quote() {
   return (
     <View style={{ alignItems: 'center', justifyContent: 'center', color: 'white', backgroundColor: '#007bffbe', padding: 20, borderRadius: 10, paddingTop: 10 }}>
-        <Text style={{ fontSize: 18, fontWeight: '500', marginBottom: 10, color: 'white' }}>Quote of the day</Text>
+        <Text style={{ fontSize: 14, fontWeight: '700', marginBottom: 10, color: 'white' }}>QUOTE OF THE DAY</Text>
         <Text style={{ fontSize: 16, fontWeight: '600', textAlign: 'center', color: 'white' }}>"{quotes[Math.floor(Math.random() * quotes.length)]}"</Text>
     </View>
   );
