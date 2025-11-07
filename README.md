@@ -35,3 +35,23 @@ node -v
 
 download expo go from playstore or apple store 
 
+
+
+then finally run 
+
+
+
+npm install 
+(make sure you are in unimate directory before npm install)
+
+
+then run
+
+
+
+npx expo start 
+
+
+
+
+you will get a qr code in terminal -> scan it -> you will get prompt to go to expo go app -> application will start in expo go just have some patience
