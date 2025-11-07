@@ -1,0 +1,8 @@
+<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_350_731" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="28">
+<rect width="28" height="28" fill="currentColor"/> <!--yeah bruh yahan pe bhi change karna hai for svgs man reactnative aur last mein bhi bruuu-->
+</mask>
+<g mask="url(#mask0_350_731)">
+<path d="M14.0003 26.8333L5.60033 20.5333C5.30866 20.3194 5.08019 20.0472 4.91491 19.7167C4.74963 19.3861 4.66699 19.0361 4.66699 18.6667V4.66667C4.66699 4.025 4.89546 3.4757 5.35241 3.01875C5.80935 2.56181 6.35866 2.33334 7.00033 2.33334H21.0003C21.642 2.33334 22.1913 2.56181 22.6482 3.01875C23.1052 3.4757 23.3337 4.025 23.3337 4.66667V18.6667C23.3337 19.0361 23.251 19.3861 23.0857 19.7167C22.9205 20.0472 22.692 20.3194 22.4003 20.5333L14.0003 26.8333ZM12.7753 17.5L19.367 10.9083L17.7337 9.21667L12.7753 14.175L10.3253 11.725L8.63366 13.3583L12.7753 17.5Z" fill="currentColor"/>
+</g>
+</svg>
