@@ -37,18 +37,18 @@ export default function App() {
             position: 'absolute',
           },
 
-          tabBarIcon: ({ focused, color, size }) => {
+          tabBarIcon: ({ focused }) => {
             switch (route.name) {
               case 'Home':
-                return <FamilyStar width={size} height={size} color={focused ? '#007AFF' : 'gray'} />;
+                return <FamilyStar width={28} height={28} color={focused ? '#007AFF' : 'gray'} />;
               case 'Timetable':
-                return <CalendarMonth width={size} height={size} color={focused ? '#007AFF' : 'gray'} />;
+                return <CalendarMonth width={28} height={28} color={focused ? '#007AFF' : 'gray'} />;
               case 'Tasks':
-                return <Beenhere width={size} height={size} color={focused ? '#007AFF' : 'gray'} />;
+                return <Beenhere width={28} height={28} color={focused ? '#007AFF' : 'gray'} />;
               case 'Events':
-                return <PartnerExchange width={size} height={size} color={focused ? '#007AFF' : 'gray'} />;
+                return <PartnerExchange width={28} height={28} color={focused ? '#007AFF' : 'gray'} />;
               case 'Profile':
-                return <IdCard width={size} height={size} color={focused ? '#007AFF' : 'gray'} />; // FILL NHI KAAM KAR RAHA CAUSE SVG SUPPORTED NHI TOH USING COLOR MORE BLUNT WAY BUT SAME
+                return <IdCard width={28} height={28} color={focused ? '#007AFF' : 'gray'} />; // FILL NHI KAAM KAR RAHA CAUSE SVG SUPPORTED NHI TOH USING COLOR MORE BLUNT WAY BUT SAME
             }
           },
         })}
