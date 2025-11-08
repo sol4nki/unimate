@@ -5,59 +5,51 @@
 </p>
 
 # Unimate
-prototype
-<!--test commit-->
+A centralized application that allows students to effectively manage their academics as well as their extracurriculars by compiling and managing the data already spread out in emails, websites, and classrooms.
 
+< Add video here >
 
-commands 
+---
+# Install
+Go to package releases and download the latest android ABB release file (right now only android application is released although iOS is supported)
 
+if you own an iOS or you just want to compile it on your own then, proceed with the Requirements and steps below ->
 
+---
+# Requirements 
 
-make sure you have git -> https://git-scm.com/install/
+Make sure you have git -> https://git-scm.com/install/
 
+Make sure you have node -> https://nodejs.org/en/download/
 
+---
+## Now proceed to run the following commands in the same order
 
+```bash
 git clone https://github.com/sol4nki/unimate
+```
 
-
-
+```bash
 cd unimate
+```
 
-
-
-node? 
-
-
-check by running -> node -v
-
-if no node -> google nodejs download -> link -> https://nodejs.org/en/download/
-
-re run
-
-
+```bash
 node -v
+```
 
+Now you just need to download expo go from PlayStore or AppStore 
 
-
-download expo go from playstore or apple store 
-
-
-
-then finally run 
-
-
-
+Now run
+```bash
 npm install 
+```
 (make sure you are in unimate directory before npm install)
 
 
-then run
+finally run,
 
-
-
+```bash
 npx expo start 
+```
 
-
-
-
-you will get a qr code in terminal -> scan it -> you will get prompt to go to expo go app -> application will start in expo go just have some patience
+You will get a qr code in terminal -> scan it using your mobile phone -> you will get a prompt to go to expo go app -> application will start in expo go just have some patience
