@@ -7,11 +7,11 @@ import Times from '../components/Times';
 
 export default function Timetable() {
   return (
-    <View style={{ flex: 1, marginTop: 30, backgroundColor: '#f7f7f7' }}>
-      <Header title="Timetable"/>
+    <View style={{ flex: 1, marginTop: -10, backgroundColor: '#f7f7f7' }}>
+      
     <SafeAreaView style={{ flex: 1, backgroundColor: '#f7f7f7' }}>
       
-      
+      <Header title="Timetable"/>
       {/* <Monmenu active={1} /> */}
       <Times/>
     </SafeAreaView>
