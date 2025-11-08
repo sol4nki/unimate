@@ -11,7 +11,7 @@ A centralized application that allows students to effectively manage their acade
 
 ---
 # Install
-Go to package releases and download the latest android ABB release file (right now only android application is released although iOS is supported)
+Go to package releases and download the latest android apk release file (right now only android application is released although iOS is supported)
 
 Or just click on this link https://github.com/sol4nki/unimate/releases/tag/v0.1.0-alpha
 
