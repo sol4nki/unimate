@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="" target="_blank">
+    <img src="./assets/banner_img.png" alt="unimate." width="35%"/>
+  </a>
+</p>
+
 # Unimate
 prototype
 <!--test commit-->
