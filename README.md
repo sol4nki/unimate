@@ -7,7 +7,9 @@
 # Unimate
 A centralized application that allows students to effectively manage their academics as well as their extracurriculars by compiling and managing the data already spread out in emails, websites, and classrooms.
 
-< Add video here >
+---
+# DEMO VIDEO (click on the image)
+[![Watch here](./github/maxresdefault.jpg)](https://www.youtube.com/watch?v=ZSfOvq54U0Y)
 
 ---
 # Install
