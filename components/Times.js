@@ -58,7 +58,8 @@ export default function Times() {
         showTime={false} 
         scrollOffsetMinutes={360}
         eventCellStyle={{
-            backgroundColor: '#007AFF',
+            // backgroundColor: '#007AFF',
+            backgroundColor: '#536170ff',
             borderRadius: 8,
             justifyContent: 'center',
             alignItems: 'center',

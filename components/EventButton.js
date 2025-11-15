@@ -30,7 +30,8 @@ export default function ClassButton({ name, tag, club, time, room, date, people,
                 <Pressable
                 onPress={showAlert}
                 style={{
-                    backgroundColor: '#007bff',
+                    // backgroundColor: '#007bff',
+                    backgroundColor: '#536170ff',
                     paddingVertical: 8,
                     paddingHorizontal: 16,
                     borderRadius: 8,

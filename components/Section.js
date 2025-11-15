@@ -15,7 +15,9 @@ export default function Section({ title, screen }) {
       }}
     >
       <Text style={{ fontSize: 22, fontWeight: '600' }}>{title}</Text>
-      <Text style={{ fontSize: 13, fontWeight: '600', color: '#007AFF'}}>View all</Text>
+      {/* <Text style={{ fontSize: 13, fontWeight: '600', color: '#007AFF'}}>View all</Text> */}
+      <Text style={{ fontSize: 13, fontWeight: '600', color: '#8398afff'}}>View all</Text>
+
     </Pressable>
   );
 }
