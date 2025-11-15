@@ -7,6 +7,11 @@ import Section from '../components/Section';
 import ClassButton from '../components/ClassButton';
 import TaskButton from '../components/TaskButton';
 
+import Beenhere from '../assets/icons/beenhere.svg';
+import CalendarMonth from '../assets/icons/calendar_month.svg';
+import PartnerExchange from '../assets/icons/partner_exchange.svg';
+import Food from '../assets/icons/food.svg';
+
 function topmsg(user){
     let k = `Hello there, ${user}`
     if ( new Date().getHours() < 12 ){
@@ -35,10 +40,10 @@ export default function Home() {
         <Text style={{ fontSize: 26, fontWeight: '600' }}>{topmsg("Pranjal")}</Text>
         <Text style={{ fontSize: 16, fontWeight: '400', color: '#555555', marginTop: -15 }}>{new Date().toLocaleString('en-US', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}</Text>
         <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-            <Sqbutton name="Assignments" onPress={() => {}} />
-            <Sqbutton name="Timetable" onPress={() => {}} />
-            <Sqbutton name="Mess Menu" onPress={() => {}} />
-            <Sqbutton name="Events" onPress={() => {}} />
+            <Sqbutton name="Assignments" img={Beenhere} onPress={() => {}} />
+            <Sqbutton name="Timetable" img={CalendarMonth} onPress={() => {}} />
+            <Sqbutton name="Mess Menu" img={Food} onPress={() => {}} />
+            <Sqbutton name="Events" img={PartnerExchange} onPress={() => {}} />
         </View>
         <Quote />
         <Section title="Today's Classes" screen="Timetable" />

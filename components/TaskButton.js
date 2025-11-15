@@ -22,7 +22,7 @@ export default function ClassButton({ name, due, onPress, tag1, color1, tag2, co
             style={{
                 flexDirection: 'row',
                 alignItems: 'center',
-                backgroundColor: '#ffffffcd',
+                backgroundColor: '#ffffffff',
                 padding: 15,
                 borderRadius: 10,
                 margin: -5,

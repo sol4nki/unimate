@@ -7,21 +7,24 @@ import Adde from '../components/Adde';
 
 export default function Events() {
   return (
-    <View style={{ flex: 1, backgroundColor: '#f7f7f7' }}>
-    <ScrollView style={{marginBottom:80, marginTop: 30, backgroundColor: '#f7f7f7'}}>
-    <Header title="Events"/>
+    <View style={{ flex: 1, backgroundColor: '#f7f7f7', marginTop: 30 }}>
+      <Header title="Events"/>
+    <ScrollView style={{marginBottom:80, backgroundColor: '#f7f7f7'}}>
+    
     <SafeAreaView style={{ flex: 1, paddingLeft: 20, paddingRight: 20 , gap: 20, alignItems: 'center' }}>
       
       {/* <Text style={{ fontSize: 22, fontWeight: '600' }}>Events Screenss</Text> 
         yes i couldnt figure out why "flex:1 view box isnt working."
       */}
       {/* dupe this for hifi design */}
-      {/* <EventButton name="Tech Talk on AI" club="d4rkc0de" date="Oct 15, 2025" tag="Tech" time="10:00 AM" room="C102" people="250 attending" color="#4287f5" />
+      <View style={{ marginTop: -20 }}>
+      <EventButton name="Tech Talk on AI" club="d4rkc0de" date="Oct 15, 2025" tag="Tech" time="10:00 AM" room="C102" people="250 attending" color="#4287f5" />
+      </View>
       <EventButton name="Music Concert" club="Cultural Club" date="Oct 20, 2025" tag="Music" time="7:00 PM" room="C102" people="150 attending" color="#f54291" />
-      <EventButton name="Art Exhibition" club="Exhibitclub" date="Oct 25, 2025" tag="Art" time="5:00 PM" room="C102" people="150 attending" color="#42f554" /> */}
-      <EventButton name="Tech Talk on AI" club="d4rkc0de" date="Oct 15, 2025" tag="Tech" time="10:00 AM" room="C102" people="250 attending" color="#7f94aaff" />
+      <EventButton name="Art Exhibition" club="Exhibitclub" date="Oct 25, 2025" tag="Art" time="5:00 PM" room="C102" people="150 attending" color="#42f554" />
+      {/* <EventButton name="Tech Talk on AI" club="d4rkc0de" date="Oct 15, 2025" tag="Tech" time="10:00 AM" room="C102" people="250 attending" color="#7f94aaff" />
       <EventButton name="Music Concert" club="Cultural Club" date="Oct 20, 2025" tag="Music" time="7:00 PM" room="C102" people="150 attending" color="#7f94aaff" />
-      <EventButton name="Art Exhibition" club="Exhibitclub" date="Oct 25, 2025" tag="Art" time="5:00 PM" room="C102" people="150 attending" color="#7f94aaff" />
+      <EventButton name="Art Exhibition" club="Exhibitclub" date="Oct 25, 2025" tag="Art" time="5:00 PM" room="C102" people="150 attending" color="#7f94aaff" /> */}
       
     </SafeAreaView>
     </ScrollView>

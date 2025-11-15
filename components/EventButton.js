@@ -14,7 +14,7 @@ export default function ClassButton({ name, tag, club, time, room, date, people,
 
     return (
 
-            <View style={{ flexDirection: 'row', backgroundColor: '#b9b9b9ff', padding: 15, borderRadius: 10, gap: 15, width: "100%"}}>
+            <View style={{ flexDirection: 'row', backgroundColor: '#ffffffff', padding: 15, borderRadius: 10, gap: 15, width: "100%"}}>
                 <View style={{height: 80, width: 80, backgroundColor: '#636363aa', alignItems: 'center', justifyContent: 'flex-start', borderRadius: 10}}/>
 
                 <View style={{display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 4, width: '70%'}}>
@@ -30,8 +30,8 @@ export default function ClassButton({ name, tag, club, time, room, date, people,
                 <Pressable
                 onPress={showAlert}
                 style={{
-                    // backgroundColor: '#007bff',
-                    backgroundColor: '#536170ff',
+                    backgroundColor: '#007bff',
+                    // backgroundColor: '#536170ff',
                     paddingVertical: 8,
                     paddingHorizontal: 16,
                     borderRadius: 8,

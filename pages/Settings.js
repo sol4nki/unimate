@@ -1,14 +1,19 @@
 import React from 'react';
-import { Alert, View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { Image, Alert, View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function SettingsPage() {
   return (
     <ScrollView marginBottom={80}>
     <SafeAreaView style={{ flex: 1, paddingLeft: 20, paddingRight: 20, marginTop: 20, gap: 20 }}>
-      
-      <View style={{position: 'absolute', top: -50, left: 0, backgroundColor: 'lightgrey', height: 210, width: '120%'}}/>
-      <View style={{height: 100, width: 100, backgroundColor: 'gray', borderRadius: 500, alignSelf: 'center', zIndex: 900, marginTop: 60}}/>
+
+      <View style={{position: 'absolute', top: -50, left: 0, backgroundColor: '#007AFF', height: 210, width: '120%', overflow: 'hidden', zIndex: -1, borderBottomColor: '#0051a8', borderBottomWidth: 60}}>
+      <Image source={require('../assets/settingsbanner.png')} style={{opacity: 0.9, borderBottomColor: '#2773c4ff', borderBottomWidth: 3}}/>
+
+      </View>
+      <View style={{height: 100, width: 100, backgroundColor: 'gray', borderRadius: 500, alignSelf: 'center', zIndex: 900, marginTop: 60}}>
+      <Image source={require('../assets/userprofile.webp')} style={{height: 100, width: 100, borderRadius: 500, borderStyle: 'solid', borderWidth: 3, borderColor: '#2773c4ff'}}/>
+      </View>
       <Text style={{ fontSize: 22, fontWeight: '600', alignSelf: 'center' }}>Pranjal Solanki</Text>
       <Text style={{ fontSize: 16, fontWeight: '500', color: '#555555', alignSelf: 'center', marginTop: -15 }}>2025999</Text>
       <Text style={{ fontSize: 16, fontWeight: '500', color: '#555555', alignSelf: 'center', marginTop: -15 }}>pranjal2599@iiitd.ac.in</Text>
