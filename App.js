@@ -31,7 +31,7 @@ export default function App() {
   return (
     <NavigationContainer key={refresh}>
       <Tab.Navigator
-        initialRouteName={global.lastRoute ?? "Profile"}
+        initialRouteName={global.lastRoute ?? "Home"}
         screenOptions={({ route }) => {
           const dm = global.darkmode;
           return {

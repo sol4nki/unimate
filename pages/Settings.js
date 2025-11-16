@@ -28,9 +28,29 @@ export default function SettingsPage() {
       <Text style={{ fontSize: 16, fontWeight: '500', color: darkmode ? '#aaaaaa' : '#555555', alignSelf: 'center', marginTop: -15 }}>pranjal2599@iiitd.ac.in</Text>
 
 
-      <View style={darkmode ? styles.sectionDark : styles.section}>
+      <View style={{ backgroundColor: darkmode ? '#1b1b1b' : '#ffffff', borderRadius: 14, marginBottom: 10, overflow: 'hidden', flexDirection: 'row' }}>
+      <View style={{ width: 6, backgroundColor: '#007AFF' }} />
 
+      <View style={{ flex: 1, paddingHorizontal: 14, paddingVertical: 10 }}>
+          {[
+            ["CGPA:", "8.2", "[synced]"],
+            ["Credits Earned:", "24"],
+            ["Credits Remaining:", "136"],
+            ["Next Exam:", "1 Dec - COM"],
+          ].map((row, i) => (
+            <View key={i} style={{ paddingVertical: 12, borderBottomWidth: i !== 3 ? 1 : 0, borderBottomColor: darkmode ? '#333' : '#e5e5e5', flexDirection: 'row', justifyContent: 'space-between' }}>
+              <Text style={{ fontSize: 16, color: darkmode ? '#e0e0e0' : '#444' }}>{row[0]}</Text>
+
+              <View style={{ flexDirection: 'row', gap: 6 }}>
+                <Text style={{ fontSize: 16, fontWeight: '700', color: darkmode ? '#4da3ff' : '#007AFF' }}>{row[1]}</Text>
+
+                {row[2] && <Text style={{ fontSize: 14, color: '#00c275', fontWeight: '600' }}>{row[2]}</Text>}
+              </View>
+            </View>
+          ))}
+        </View>
       </View>
+
 
       <View style={darkmode ? styles.itemDark : styles.item}>
       <Text style={[styles.settingText, darkmode && { color: '#fff', fontSize: 18, fontWeight: '500' }]}>Google Sync</Text>
