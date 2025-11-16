@@ -1,29 +1,68 @@
-import React from 'react';
-import { Image, Alert, View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import {React, useState } from 'react';
+import { Image, Alert, View, Text, StyleSheet, ScrollView, TouchableOpacity, Switch } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function SettingsPage() {
+  // const [darkmode, setDarkmode] = useState(1)
+  const [darkmode, setDarkmode] = useState(global.darkmode);
+  const [googlesync, setGooglesync] = useState(true);
+  const [historysave, setHistorysave] = useState(true);
+  const toggleDark = () => {
+    global.darkmode = !global.darkmode;
+    setDarkmode(global.darkmode);
+    global.refreshApp("Profile");
+  };
   return (
-    <ScrollView marginBottom={80}>
+    <ScrollView marginBottom={80} backgroundColor={darkmode ? '#101010ff' : '#f7f7f7'}>
     <SafeAreaView style={{ flex: 1, paddingLeft: 20, paddingRight: 20, marginTop: 20, gap: 20 }}>
 
-      <View style={{position: 'absolute', top: -50, left: 0, backgroundColor: '#007AFF', height: 210, width: '120%', overflow: 'hidden', zIndex: -1, borderBottomColor: '#0051a8', borderBottomWidth: 60}}>
+      <View style={{position: 'absolute', top: -50, left: 0, backgroundColor: '#007AFF', height: 210, width: '120%', overflow: 'hidden', zIndex: -1}}>
       <Image source={require('../assets/settingsbanner.png')} style={{opacity: 0.9, borderBottomColor: '#2773c4ff', borderBottomWidth: 3}}/>
 
       </View>
       <View style={{height: 100, width: 100, backgroundColor: 'gray', borderRadius: 500, alignSelf: 'center', zIndex: 900, marginTop: 60}}>
       <Image source={require('../assets/userprofile.webp')} style={{height: 100, width: 100, borderRadius: 500, borderStyle: 'solid', borderWidth: 3, borderColor: '#2773c4ff'}}/>
       </View>
-      <Text style={{ fontSize: 22, fontWeight: '600', alignSelf: 'center' }}>Pranjal Solanki</Text>
-      <Text style={{ fontSize: 16, fontWeight: '500', color: '#555555', alignSelf: 'center', marginTop: -15 }}>2025999</Text>
-      <Text style={{ fontSize: 16, fontWeight: '500', color: '#555555', alignSelf: 'center', marginTop: -15 }}>pranjal2599@iiitd.ac.in</Text>
-      <View style={styles.section}>
-        
+      <Text style={{ fontSize: 22, fontWeight: '600', color: darkmode ? '#ecececff' : '#202020ff', alignSelf: 'center', marginTop: -10 }}>Pranjal Solanki</Text>
+      <Text style={{ fontSize: 16, fontWeight: '500', color: darkmode ? '#aaaaaa' : '#555555', alignSelf: 'center', marginTop: -15 }}>2025999</Text>
+      <Text style={{ fontSize: 16, fontWeight: '500', color: darkmode ? '#aaaaaa' : '#555555', alignSelf: 'center', marginTop: -15 }}>pranjal2599@iiitd.ac.in</Text>
+
+
+      <View style={darkmode ? styles.sectionDark : styles.section}>
+
       </View>
 
-      <View style={styles.item} />
-      <View style={styles.item} />
-      <View style={styles.item} />
+      <View style={darkmode ? styles.itemDark : styles.item}>
+      <Text style={[styles.settingText, darkmode && { color: '#fff', fontSize: 18, fontWeight: '500' }]}>Google Sync</Text>
+        <Switch
+          value={googlesync}
+          onValueChange={() => setGooglesync(prev => !prev)}
+          trackColor={{ false: "#767577", true: "#007AFF" }}
+          // onValueChange={toggleDark}
+          style={{marginTop: 15}}
+        />
+      </View>
+      <View style={darkmode ? styles.itemDark : styles.item}>
+        <Text style={[styles.settingText, darkmode && { color: '#fff', fontSize: 18, fontWeight: '500' }]}>Dark Mode</Text>
+        <Switch
+          value={darkmode}
+          // onValueChange={() => setDarkmode(prev => !prev)}
+          // trackColor={{ false: "#767577", true: "#007AFF" }}
+          onValueChange={toggleDark}
+          style={{marginTop: 15}}
+        />
+          
+      </View>
+      <View style={darkmode ? styles.itemDark : styles.item}>
+        <Text style={[styles.settingText, darkmode && { color: '#fff', fontSize: 18, fontWeight: '500' }]}>Save History</Text>
+        <Switch
+          value={historysave}
+          onValueChange={() => setHistorysave(prev => !prev)}
+          trackColor={{ false: "#767577", true: "#007AFF" }}
+          // onValueChange={toggleDark}
+          style={{marginTop: 15}}
+        />
+      </View>
       <TouchableOpacity style={styles.logout} onPress={() => Alert.alert("Logged Out", "Successfully logged out of your account please log back in.")}>
         <Text style={{ color: 'white', fontWeight: '800', fontSize: 16 }}>←  Logout</Text>
       </TouchableOpacity>
@@ -39,6 +78,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     padding: 15,
   },
+  containerDark: {
+    flex: 1,
+    backgroundColor: '#101010ff',
+    padding: 15,
+  },
   header: {
     fontWeight: 'bold',
     fontSize: 16,
@@ -46,15 +90,39 @@ const styles = StyleSheet.create({
   },
   section: {
     height: 180,
-    backgroundColor: '#ccc',
+    backgroundColor: '#ffffffff',
     borderRadius: 10,
-    marginBottom: 15,
+    marginBottom: 5,
+    overflow: 'hidden'
+  },
+  sectionDark: {
+    height: 180,
+    backgroundColor: '#333',
+    borderRadius: 10,
+    marginBottom: 5,
+    overflow: 'hidden'
   },
   item: {
     height: 60,
-    backgroundColor: '#ccc',
+    backgroundColor: '#ffffffff',
     borderRadius: 10,
-    marginBottom: 15,
+    marginBottom: 5,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 15,
+  },
+  itemDark: {
+    height: 60,
+    backgroundColor: '#333',
+    borderRadius: 10,
+    marginBottom: 5,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 15,
   },
   logout: {
     height: 50,
@@ -63,7 +131,12 @@ const styles = StyleSheet.create({
     backgroundColor: 'red',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 30,
+    marginTop: 0,
+  },
+  settingText: {
+    fontSize: 18,
+    fontWeight: '500',
+    color: '#202020ff',
   }
 });
 

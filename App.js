@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Beenhere from './assets/icons/beenhere.svg';
@@ -19,14 +19,26 @@ import Tasks from './pages/Tasks';
 const Tab = createBottomTabNavigator();
 
 export default function App() {
+  global.darkmode = global.darkmode ?? false;
+
+  // forced rerender karna padega globaldarkmode ki wajah se
+  const [refresh, setRefresh] = useState(false);
+  global.refreshApp = (currentRouteName) => {
+    global.lastRoute = currentRouteName;
+    setRefresh(prev => !prev);
+  };
+
   return (
-    <NavigationContainer>
+    <NavigationContainer key={refresh}>
       <Tab.Navigator
-        screenOptions={({ route }) => ({
-          headerShown: false,
-          tabBarActiveTintColor: '#007AFF',
-          tabBarInactiveTintColor: 'gray',
-          tabBarStyle: { 
+        initialRouteName={global.lastRoute ?? "Profile"}
+        screenOptions={({ route }) => {
+          const dm = global.darkmode;
+          return {
+            headerShown: false,
+            tabBarActiveTintColor: '#007AFF',
+            tabBarInactiveTintColor: 'gray',
+            tabBarStyle: {
             // mere hisab se ye best config hai nav ki
             // marginTop: 10, 
             paddingTop: 10,    
@@ -36,6 +48,8 @@ export default function App() {
             borderTopWidth: 0,  
             // backgroundColor: 'white',
             position: 'absolute',
+
+            backgroundColor: dm ? '#101010ff' : '#ffffffff',
           },
 
           tabBarIcon: ({ focused }) => {
@@ -52,7 +66,8 @@ export default function App() {
                 return <IdCard width={28} height={28} color={focused ? '#007AFF' : 'gray'} />; // FILL NHI KAAM KAR RAHA CAUSE SVG SUPPORTED NHI TOH USING COLOR MORE BLUNT WAY BUT SAME
             }
           },
-        })}
+        };
+        }}
       >
         <Tab.Screen name="Home" component={Home} />
         <Tab.Screen name="Timetable" component={Timetable} />
