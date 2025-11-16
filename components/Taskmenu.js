@@ -2,7 +2,7 @@ import { Text, ScrollView, Pressable } from 'react-native';
 import { useEffect, useState } from 'react';
 // import { ScrollView } from 'react-native/types_generated/index';
 
-export default function Taskmenu({ active, onChange }) {
+export default function Taskmenu({ onChange }) {
     const [day, setDay] = useState(1)
     const press = (num) => {
         setDay(num);

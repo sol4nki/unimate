@@ -6,8 +6,8 @@ export default function ClassButton({ name, tag, club, time, room, date, people,
 
     const showAlert = () => {
         Alert.alert(
-        'Added To calendar!',
-        'Successfully added the event to your google calendar.',
+        'Added to Calendar!',
+        'Successfully added the event to your Google Calendar.',
         );
     };
 

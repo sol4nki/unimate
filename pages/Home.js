@@ -27,6 +27,20 @@ function topmsg(user){
 }
 
 export default function Home() {
+    const [tasks, setTasks] = useState([
+        { id: 1, name: "Math Assignment", due: "Oct 10, 2025", completed: false },
+        { id: 2, name: "Physics Lab Report", due: "Oct 10, 2025", completed: false },
+        { id: 3, name: "Computer Science Project", due: "Oct 10, 2025", completed: false },
+    ]);
+
+    const toggleTask = (id) => {
+        setTasks(prev =>
+            prev.map(t =>
+                t.id === id ? { ...t, completed: !t.completed } : t
+            )
+        );
+    };
+    
     const showAlert = () => {
                 Alert.alert(
                 'Quick Reminder!',
@@ -51,9 +65,19 @@ export default function Home() {
             <ClassButton name="Linear Algebra" time="1:00PM - 3:00PM" room="C102" onPress={() => {}} />
             <ClassButton name="Introduction to Prog" time="3:00PM - 5:00PM" room="C103" onPress={() => {}} />
         <Section title="Upcoming Tasks" screen="Tasks" />
-            <TaskButton name="Math Assignment" due="Oct 10, 2025" onPress={() => {}} />
+            {/* <TaskButton name="Math Assignment" due="Oct 10, 2025" onPress={() => {}} />
             <TaskButton name="Physics Lab Report" due="Oct 10, 2025" onPress={() => {}} />
-            <TaskButton name="Computer Science Project" due="Oct 10, 2025" onPress={() => {}} />
+            <TaskButton name="Computer Science Project" due="Oct 10, 2025" onPress={() => {}} /> */}
+            {tasks.map(task => (
+                <TaskButton
+                    key={task.id}
+                    name={task.name}
+                    due={task.due}
+                    completed={task.completed}
+                    onToggle={() => toggleTask(task.id)}
+                    onPress={() => {}}
+                />
+            ))}
 
         {/* <Text style={{ fontSize: 22, fontWeight: '600' }}>Home Screen</Text> */}
     </SafeAreaView>

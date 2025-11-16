@@ -3,8 +3,8 @@ import { Text, View, Pressable } from 'react-native';
 import { Checkbox } from 'react-native-paper';
 import Tag from '../assets/icons/tag.svg';
 
-export default function ClassButton({ name, due, onPress, tag1, color1, tag2, color2 }) {
-    const [isChecked, setChecked] = useState(false)
+export default function ClassButton({ name, due, onPress, tag1, color1, tag2, color2, completed, onToggle }) {
+    // const [isChecked, setChecked] = useState(false)
     const [tagstate1, setTagstate1] = useState(!!tag1);
     const [tagstate2, setTagstate2] = useState(!!tag2);
     // if (tag1){
@@ -16,7 +16,7 @@ export default function ClassButton({ name, due, onPress, tag1, color1, tag2, co
     return (
         <Pressable
             onPress={() => {
-                setChecked(!isChecked);
+                onToggle();
                 if (onPress) onPress();
             }}
             style={{
@@ -26,18 +26,18 @@ export default function ClassButton({ name, due, onPress, tag1, color1, tag2, co
                 padding: 15,
                 borderRadius: 10,
                 margin: -5,
-                opacity: isChecked ? 0.5 : 1 
+                opacity: completed ? 0.5 : 1 
             }} 
         >
             <Checkbox.Android
-                status={isChecked ? 'checked' : 'unchecked'}
-                onPress={() => setChecked(!isChecked)}
-                color="#007AFF"          
-                uncheckedColor="#565555ff" 
+                status={completed ? 'checked' : 'unchecked'}
+                onPress={onToggle}
+                color="#007AFF"
+                uncheckedColor="#565555ff"
             />
 
             <View style={{ flexDirection: 'column', marginLeft: 15}}>
-                <Text style={{ fontSize: 17, fontWeight: '600', textDecorationLine: isChecked ? 'line-through' : 'none' }}>{name}</Text>
+                <Text style={{ fontSize: 17, fontWeight: '600', textDecorationLine: completed ? 'line-through' : 'none' }}>{name}</Text>
                 {tagstate1 ? <View style={{ flexDirection: 'row', gap: 6, marginTop: 4, alignItems: 'center' }}>
                 {tagstate1 ? <View style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: color1, paddingVertical: 2, paddingBottom: 4, paddingLeft: 10, paddingRight: 10, borderRadius: 100 }}>
                 <Tag width={12} height={12} style={{ marginRight: 4 }} /> 
