@@ -4,6 +4,10 @@ import EventButton from '../components/EventButton';
 import Header from '../components/Header';
 import Adde from '../components/Adde';
 // import { ScrollView } from 'react-native/types_generated/index';
+import Art from '../assets/classes/art.jpeg';
+import Music from '../assets/classes/music.jpeg';
+import Tech from '../assets/classes/ai.jpeg';
+
 
 export default function Events() {
   return (
@@ -18,10 +22,10 @@ export default function Events() {
       */}
       {/* dupe this for hifi design */}
       <View style={{ marginTop: -20 }}>
-      <EventButton name="Tech Talk on AI" club="d4rkc0de" date="Oct 15, 2025" tag="Tech" time="10:00 AM" room="C102" people="250 attending" color="#4287f5" />
+      <EventButton name="Tech Talk on AI" club="d4rkc0de" date="Oct 15, 2025" tag="Tech" time="10:00 AM" room="C102" people="250 attending" color="#4287f5" img={Tech} />
       </View>
-      <EventButton name="Music Concert" club="Cultural Club" date="Oct 20, 2025" tag="Music" time="7:00 PM" room="C102" people="150 attending" color="#f54291" />
-      <EventButton name="Art Exhibition" club="Exhibitclub" date="Oct 25, 2025" tag="Art" time="5:00 PM" room="C102" people="150 attending" color="#42f554" />
+      <EventButton name="Music Concert" club="Cultural Club" date="Oct 20, 2025" tag="Music" time="7:00 PM" room="C102" people="150 attending" color="#f54291" img={Music} />
+      <EventButton name="Art Exhibition" club="Exhibitclub" date="Oct 25, 2025" tag="Art" time="5:00 PM" room="C102" people="150 attending" color="#42f554" img={Art} />
       {/* <EventButton name="Tech Talk on AI" club="d4rkc0de" date="Oct 15, 2025" tag="Tech" time="10:00 AM" room="C102" people="250 attending" color="#7f94aaff" />
       <EventButton name="Music Concert" club="Cultural Club" date="Oct 20, 2025" tag="Music" time="7:00 PM" room="C102" people="150 attending" color="#7f94aaff" />
       <EventButton name="Art Exhibition" club="Exhibitclub" date="Oct 25, 2025" tag="Art" time="5:00 PM" room="C102" people="150 attending" color="#7f94aaff" /> */}
