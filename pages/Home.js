@@ -14,7 +14,7 @@ import Food from '../assets/icons/food.svg';
 
 import Meth from '../assets/classes/2nd.png';
 import Ip from '../assets/classes/ip.png';
-import Ihci from '../assets/classes/idk.jpeg';
+import Ihci from '../assets/classes/ihci.png';
 
 function topmsg(user){
     let k = `Hello there, ${user}`
