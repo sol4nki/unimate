@@ -58,6 +58,7 @@ npm install
 
 finally run,
 
+**MAKE SURE YOU ARE ON THE SAME WIFI NETWORK ON BOTH YOUR MOBILE PHONE AND YOUR LAPTOP**
 ```bash
 npx expo start 
 ```
