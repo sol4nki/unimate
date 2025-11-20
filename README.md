@@ -62,5 +62,7 @@ finally run,
 ```bash
 npx expo start 
 ```
+SELECT THE PROCEED ANONYMOUSLY OPTION (at the very bottom blue color 2 options are there Login and Anonymous one (press down arrow key ↓ and then ENTER))
+
 
 You will get a qr code in terminal -> scan it using your mobile phone -> you will get a prompt to go to expo go app -> application will start in expo go just have some patience
