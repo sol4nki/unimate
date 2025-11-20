@@ -6,7 +6,7 @@ import Sqbutton from '../components/Sqbutton';
 import Section from '../components/Section';
 import ClassButton from '../components/ClassButton';
 import TaskButton from '../components/TaskButton';
-
+import EmailThreadButton from '../components/EmailThreadButton';
 import Beenhere from '../assets/icons/beenhere.svg';
 import CalendarMonth from '../assets/icons/calendar_month.svg';
 import PartnerExchange from '../assets/icons/partner_exchange.svg';
@@ -124,6 +124,10 @@ export default function Home({navigation}) {
             <Sqbutton name="Events" img={PartnerExchange} onPress={() => navigation.navigate('Events')} />
         </View>
         <Quote />
+        <Text style={{ fontSize: 22, fontWeight: '600' }}>Email Threads</Text>
+            <EmailThreadButton subject="Project Updates for IHCI Group 03" sender="Nitish" content="We need to go over the project again, lets fix everything again before submission..." />
+            <EmailThreadButton subject="Quick Meeting Reminder for COM..." sender="Nayan"  content="Dont forget to join the google meet at 8pm today, we need to finish all the tasks provided..."/>
+            <EmailThreadButton subject="[IHCI] - Assignment Feedback" sender="Prof."  content = "Your assignment has been graded. Below attached pdf contains all the details..." />
         <Section title="Today's Classes" screen="Timetable" />
             <ClassButton name="IHCI" time="10:00AM - 12:00PM" room="C101" onPress={() => {}} img={Ihci} />
             <ClassButton name="Linear Algebra" time="1:00PM - 3:00PM" room="C102" onPress={() => {}} img={Meth} />
